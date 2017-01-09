@@ -1,0 +1,71 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+  <meta http-equiv="Content-Security-Policy" content="default-src * data:; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+  <script src="components/loader.js"></script>
+  <script src="lib/onsenui/js/onsenui.min.js"></script>
+
+  <link rel="stylesheet" href="components/loader.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsenui.css">
+  <link rel="stylesheet" href="lib/onsenui/css/onsen-css-components.css">
+  
+  <script src="main.js"></script>
+</head>
+<body style="margin:10px;">
+
+  <ons-navigator title="Navigator" id="navigator1">
+    
+    <ons-template id="page1">
+      <ons-page>
+        <ons-toolbar>
+          <div class="center">Page 1</div>
+        </ons-toolbar>
+        <section style="padding: 8px;">
+          <p>最初のページです。</p>
+        </section>
+        <section style="padding: 8px;">
+          <ons-button modifier="light" onclick="goPage('page2');">
+            次へ移動
+          </ons-button>
+        </section>
+      </ons-page>
+    </ons-template>
+    
+    <ons-template id="page2">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-back-button>Back</ons-back-button>
+          </div>
+          <div class="center">Page 2</div>
+        </ons-toolbar>
+        <section style="padding: 8px;">
+          <p>次のページです</p>
+        </section>
+        <section style="padding: 8px;">
+          <ons-button modifier="light" onclick="goPage('page3')">
+            さらに移動
+          </ons-button>
+        </section>
+      </ons-page>
+    </ons-template>
+    
+    <ons-template id="page3">
+      <ons-page>
+        <ons-toolbar>
+          <div class="left">
+            <ons-back-button>Back</ons-back-button>
+          </div>
+          <div class="center">Page 3</div>
+        </ons-toolbar>
+        <section style="padding: 8px;">
+          <p>最後のページです</p>
+        </section>
+      </ons-page>
+    </ons-template>
+  </ons-navigator>
+    
+</body>
+</html>
